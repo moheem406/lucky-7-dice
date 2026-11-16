@@ -9,6 +9,9 @@
 ### Sprint 1
 
 Goal: [Describe the result you want.]
-The player can predict the score make high score of his own before his 5 lives are out by predicting wrong.
-Start: [Date]
-End: [Date]
+The player can choose a number and predict what the dice will roll bigger than 7 equal than 7 or less than 7 if the player
+predict correct he will get a life if prediction is wrong he loses a life , if the player lost all life's the game is over
+or else keep making high score
+
+Start: [16 Nov]
+End: [24 Nov]
