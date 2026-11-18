@@ -3,34 +3,37 @@
     
     color: white;
     margin: 0;
-
 }
 
 body {
   background-color: rgb(204, 224, 204);  
-  padding: 20px 0;
-  color: var(--color-text);
+  padding: 20px;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   width: 100vh;
   align-items: center;
   justify-content: center;
-  height: inherit;
+  display: grid;
+  place-items: center;
 }
 h1 {
     justify-content: center;
-    color: black;
+    color: rgb(240, 192, 88);
     text-align: center;
+    padding: 5px;
+    
 }
 .game-panel {
-    width: 100vh;
-    background-color: rgb(146, 205, 122);
+    width: fit-content;
+    background-color: rgb(65, 118, 43);
     padding: 20px;
     border: 1px solid black;
     margin: 0 auto;
     align-content: center;
     max-width: 600px;
     flex-direction: column;
+    text-align: center;
+    justify-self: center;
 
 }
 
@@ -38,21 +41,27 @@ h1 {
     display: flex;
     justify-content: space-between;
     background-color: rgb(245, 190, 89);
-    border: 1px solide black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
 }
 .big-circle{
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50px;
     align-content: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
     justify-content: center;
+    margin: 4px;
+    
 }
 .arena {
     justify-content: center;
     align-items: center;
-    display: grid;
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column;
+    
 }
 .dice {
     width: 60px;
@@ -65,6 +74,7 @@ h1 {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    align-content: center;
 }
 
 #dice1 {
@@ -81,4 +91,23 @@ h1 {
 }
 .message {
     color: rgb(245, 190, 89);
+}
+#tick-options {
+    display: flex;
+    color: black;
+}
+.tick-cards {
+    display:table-row;
+}
+#btn-roll {
+    color:black;
+    background-color: gold;
+}
+#btn-reset {
+    color: #000;
+    background-color: gold;
+}
+#btn-reset-hs {
+    color: black;
+    background-color: gold;
 }
