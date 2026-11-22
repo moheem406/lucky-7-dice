@@ -19,11 +19,11 @@ const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅',]
 //dice symbols got from google
 
 function updateStatus () {
-    livesDisplay.textContent = `❤️ ${lives}`
+    livesDisplay.textContent = ` ${lives}`
     score.textContent = wins
     highScoreDisplay.textContent = highScore
 } 
-
+//function prediction should be checked in 
 function getSelectedPrediction () {
     for (const input of radioInputs) {
         if (input.checked) return input.value
@@ -37,7 +37,7 @@ function setControlsDisabled(disabled) {
 rollbtn.addEventListener('click', () => {
         if (isRolling || lives <= 0) return
 
-
+//
         const guess = getSelectedPrediction()
         if (!guess) {
             message.className = "message lose-msg"
@@ -52,13 +52,18 @@ rollbtn.addEventListener('click', () => {
         bigCircle.classList.add('rolling-circle')
         dice1El.classList.add('rolling-dice')
         dice2El.classList.add('rolling-dice')
-
+// how to get both dices to bring random no.
         const roll1 = Math.floor(Math.random() * 6) + 1
         const roll2 = Math.floor(Math.random() * 6) + 1
         const total = roll1 + roll2
 
         dice1El.textContent = diceFaces[roll1 - 1]
+        console.log(roll1)
+        console.log(diceFaces[roll1])
         dice2El.textContent = diceFaces[roll2 - 1]
+        console.log(roll2)
+        console.log(diceFaces[roll2])
+
         //winning condition
         let actualOutcome = ''
         if (total > 7) {
@@ -68,7 +73,7 @@ rollbtn.addEventListener('click', () => {
         } else {
             actualOutcome = 'exact'
         }
-
+// if condition for winner to add lives and add highscore and loser should have 1 life less.
         if (guess === actualOutcome) {
             wins++
             lives++
@@ -85,7 +90,7 @@ rollbtn.addEventListener('click', () => {
         }
         updateStatus()
         isRolling = false
-
+// Game Over condition.
         if (lives <= 0) {
             message.className = 'message lose-msg'
             message.textContent = `GAME OVER!!!🤦‍♂️ Out Of Lives. Final wins: ${wins}`
@@ -95,6 +100,7 @@ rollbtn.addEventListener('click', () => {
             setControlsDisabled(false)
         }
     })
+    //after reset every thing should start from start
 resetbtn.addEventListener('click', () => {
     lives = 5
     wins = 0
@@ -106,7 +112,7 @@ resetbtn.addEventListener('click', () => {
     updateStatus()
     setControlsDisabled(false)
 })
-
+//to reset highscore
 resetshsbtn.addEventListener('click', () => {
     if (isRolling) return
     highScore = 0
