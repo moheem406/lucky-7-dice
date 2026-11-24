@@ -116,5 +116,22 @@ h1 {
     color: #000;
     background-color: gold;
 }
+dialog {
+     width: fit-content;
+    background-color: rgb(65, 118, 43);
+    padding: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+    align-content: center;
+    max-width: 600px;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
 
 
+}
+.btn-close {
+    background-color: rgb(247, 193, 15);
+    color: black;
+
+}

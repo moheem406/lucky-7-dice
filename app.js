@@ -15,6 +15,9 @@ const rollbtn = document.getElementById('btn-roll')
 const resetbtn = document.getElementById('btn-reset')
 const resetshsbtn = document.getElementById('btn-reset-hs')
 const radioInputs = document.querySelectorAll('input[name="Prediction"]')
+const helpbtn = document.getElementById('help-btn')
+const infoPopup = document.querySelector('#info-pop-up')
+const btnclose = document.querySelector('#btn-close')
 const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅',]
 //dice symbols got from google
 
@@ -121,4 +124,13 @@ resetshsbtn.addEventListener('click', () => {
     message.className = 'message'
     message.textContent = 'High Score has been reset 0.'
 })
+//infopopUp for Instructions
+helpbtn.addEventListener('click', () => {
+    infoPopup.showModal()
+})
+
+btnclose.addEventListener('click', () =>{
+    infoPopup.close()
+})
 updateStatus()
+
